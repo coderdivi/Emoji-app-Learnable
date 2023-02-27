@@ -1,0 +1,140 @@
+
+/**! miscellaneous */
+* {
+  box-sizing: border-box;
+  margin: 0px ;
+  outline: none;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(5, 14, 49);
+ 
+}
+
+/**!utility */
+
+.App {
+width: 100%;
+}
+
+
+.container{
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+
+
+}
+
+/**!text & textholders */
+
+.menu{
+  display: grid;
+  place-items: center;
+}
+
+.menu_text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  color: white;
+}
+
+.menu_text h1{
+  margin-top: 15%;
+  font-size: 3em;
+letter-spacing: 3px;
+
+}
+
+.menu_text p{
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.menu_text input{
+  margin-top: 3em;
+  padding: .7em 1em;
+  border: solid 1px transparent;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(78, 78, 78,.4 );
+
+}
+
+.menu_text input:hover{
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+
+/* *!buttons */
+.search{
+  all: unset;
+  margin-left: 3em;
+  padding: .3em 1em;
+  background-color: white;
+  box-shadow: 0 0 05px rgba(87,87, 87, .3);
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+
+}
+
+.search:hover{
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+}
+/* *!all things card! */
+
+.card{
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* transition: width 2s, height 2s, transform 2s; */
+  animation: spin-in 5s forwards infinite;
+animation-iteration-count: 1;
+  box-shadow: 0 0 5px rgba(78, 78, 78,.4 );
+}
+.emo{
+  font-size: 3em;
+}
+
+/* *!media queries */
+
+@media (min-width:600px){
+  .container{
+  width: 70%;
+  margin-inline: auto;
+
+  }
+}
+
+
+@keyframes spin-in {
+  0% {
+    top: 3rem;
+    transform: scale(0.5) ;
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-duration: .2s;
+  }
+  100% {
+    top: 0rem;
+    opacity: 1;
+    transform: scale(1) ;
+  }
+
+}
